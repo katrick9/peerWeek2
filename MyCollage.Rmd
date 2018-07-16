@@ -1,0 +1,20 @@
+---
+title: "Map"
+author: "Krishna"
+date: "7/16/2018"
+output: html_document
+---
+
+##Peer-graded Assignment: R Markdown and Leaflet
+
+## Introduction
+
+This project was created as part of the Developing Data Products course of the Coursera [Data Science Specialisation](https://www.coursera.org/specializations/jhu-data-science). The goal of the project is to create a web page using R Markdown that features a map created with Leaflet, and to host the resulting web page on either GitHub Pages, RPubs, or NeoCities.
+
+## Map
+
+```{r}
+library(leaflet)
+my_map <- leaflet() %>% addTiles() 
+my_map <- my_map %>% addMarkers(lat=23.4123, lng= 85.4399, popup="My Collage")
+my_map
